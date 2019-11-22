@@ -5,7 +5,7 @@ A project template for frontend apps using the [ok](https://github.com/nichoth/o
 Git clone and then change the origin.
 
 ```
-hub clone @nichoth/template ok
+hub clone template-ok
 rm -rf .git
 git init
 npm init
