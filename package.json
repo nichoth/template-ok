@@ -9,11 +9,13 @@
   },
   "scripts": {
     "start": "npm run serve",
-    "serve": "env $(cat .env | xargs) budo example/index.js:bundle.js --pushstate --dir=public --live -- -t babelify -g aliasify -t [ envify --NODE_ENV development ] -dv",
+    "serve": "env $(cat .env | xargs) budo src/index.js:bundle.js --pushstate --dir=public --live -- -t babelify -g aliasify -t [ envify --NODE_ENV development ] -dv",
     "build": "npm run build-js && npm run build-css",
     "build-js": "browserify -p bundle-collapser/plugin example/index.js -t babelify -t [ envify --NODE_ENV production ] -g aliasify -g unassertify | uglifyjs -mc > public/bundle.js",
+    "build-css": "node-sass --output-style=compressed src/style/main.scss > public/style.css",
+    "sass-watch": "node-sass --watch src/style/main.scss --source-map-embed public/style.css",
     "lint": "eslint . --config .eslintrc",
-    "test": "npm run test-browser",
+    "test": "tape test/{**/*,*}.js",
     "test-browser": "browserify -t babelify test-browser/index.js | htmlify test-browser/index.html | tape-run --input html | tap-spec"
   },
   "dependencies": {
