@@ -1,4 +1,4 @@
-var ok = require('../')
+var ok = require('@nichoth/ok')
 var { h } = require('preact')
 var EVENTS = require('@nichoth/events/namespace')({
     hello: ['world']
