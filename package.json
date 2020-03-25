@@ -22,6 +22,7 @@
     "@nichoth/ok": "0.0.2",
     "observ": "^0.2.0",
     "observ-struct": "^6.0.0",
+    "preact": "^8.5.3",
     "ruta3": "^2.0.1"
   },
   "devDependencies": {
@@ -44,7 +45,6 @@
     "husky": "^3.1.0",
     "inline-htmlify": "^2.0.1",
     "node-sass": "^4.13.0",
-    "preact": "^8.5.3",
     "preact-compat": "^3.19.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.13.2",
