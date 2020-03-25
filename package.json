@@ -2,9 +2,7 @@
   "main": "index.js",
   "husky": {
     "hooks": {
-      "prepush": "./test/githook/prepush.sh",
-      "preversion": "npm run lint && npm test",
-      "postversion": "git push --no-verify && git push --tags --no-verify"
+      "pre-push": "./test/githook/prepush.sh"
     }
   },
   "scripts": {
@@ -15,6 +13,8 @@
     "build-css": "node-sass --output-style=compressed src/style/main.scss > public/style.css",
     "sass-watch": "node-sass --watch src/style/main.scss --source-map-embed public/style.css",
     "lint": "eslint . --config .eslintrc",
+    "preversion": "npm run lint && npm test",
+    "postversion": "git push --no-verify && git push --tags --no-verify",
     "test": "tape test/{**/*,*}.js",
     "test-browser": "browserify -t babelify test-browser/index.js | htmlify test-browser/index.html | tape-run --input html | tap-spec"
   },
@@ -47,6 +47,7 @@
     "preact": "^8.5.3",
     "preact-compat": "^3.19.0",
     "tap-spec": "^5.0.0",
+    "tape": "^4.13.2",
     "tape-run": "^6.0.1",
     "uglify-js": "^3.6.9",
     "unassertify": "^2.1.1"
