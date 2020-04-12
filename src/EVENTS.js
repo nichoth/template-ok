@@ -5,3 +5,4 @@ var EVENTS = namespace({
 })
 
 module.exports = EVENTS
+
