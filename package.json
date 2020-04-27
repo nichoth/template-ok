@@ -19,6 +19,7 @@
     "test-browser": "browserify -t babelify test-browser/index.js | htmlify test-browser/index.html | tape-run --input html | tap-spec"
   },
   "dependencies": {
+    "3box": "^1.18.1",
     "@nichoth/ok": "0.0.2",
     "observ": "^0.2.0",
     "observ-struct": "^6.0.0",

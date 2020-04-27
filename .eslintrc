@@ -11,6 +11,9 @@
     },
 
     "parserOptions": {
+        "ecmaVersion": {
+            "ecmaVersion": 2017
+        },
         "ecmaFeatures": {
             "modules": true,
             "jsx": true

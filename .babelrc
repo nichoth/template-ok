@@ -14,8 +14,9 @@
     "presets": [
         ["@babel/preset-env", {
             "targets": {
+                esmodules: true,
                 "browsers": [
-                    ">0.25%",
+                    "defaults",
                     "not ie 11",
                     "not op_mini all"
                 ]
